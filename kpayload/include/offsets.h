@@ -4,13 +4,13 @@
 #error FW not set
 #endif
 
-#if FW==700
-#include "offsets/700-702.h"
-#elif FW==701
-#include "offsets/700-702.h"
-#elif FW==702
-#include "offsets/700-702.h"
-#elif FW==750
+//#if FW==700
+//#include "offsets/700-702.h"
+//#elif FW==701
+//#include "offsets/700-702.h"
+//#elif FW==702
+//#include "offsets/700-702.h"
+#if FW==750
 #include "offsets/750-751.h"
 #elif FW==751
 #include "offsets/750-751.h"
