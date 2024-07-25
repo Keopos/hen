@@ -110,10 +110,12 @@ int install_payload(struct thread *td, struct install_payload_args* args)
 static inline void patch_update(void)
 {
 	unlink(PS4_UPDATE_FULL_PATH);
+        rmdir(PS4_UPDATE_FULL_PATH);
+        mkdir(PS4_UPDATE_FULL_PATH, 777);
+	
 	unlink(PS4_UPDATE_TEMP_PATH);
-
-	mkdir(PS4_UPDATE_FULL_PATH, 0777);
-	mkdir(PS4_UPDATE_TEMP_PATH, 0777);
+        rmdir(PS4_UPDATE_TEMP_PATH);
+	mkdir(PS4_UPDATE_TEMP_PATH, 777);
 }
 
 int _main(struct thread *td)
