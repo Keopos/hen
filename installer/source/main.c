@@ -1,4 +1,4 @@
-#include "ps4.h"
+z#include "ps4.h"
 
 #include "defines.h"
 #include "offsets.h"
@@ -243,13 +243,13 @@ static inline void patch_update(void)
   unlink(PS4_UPDATE_FULL_PATH);
   rmdir(PS4_UPDATE_FULL_PATH);
   if (mkdir(PS4_UPDATE_FULL_PATH, 0777) != 0) {
-    printf_debug("Failed to create /update/PS4UPDATE.PUP.");
+    printf_debug("Fallo en la kreacion /update/PS4UPDATE.PUP.");
   }
 	
   unlink(PS4_UPDATE_TEMP_PATH);
   rmdir(PS4_UPDATE_TEMP_PATH);
   if (mkdir(PS4_UPDATE_TEMP_PATH, 0777) != 0) {
-    printf_debug("Failed to create /update/PS4UPDATE.PUP.net.temp.");
+    printf_debug("Fallo en la kreacion /update/PS4UPDATE.PUP.net.temp.");
   }
 }
 
@@ -261,7 +261,7 @@ int _main(struct thread *td)
 	initKernel();
 	initLibc();
 
-        printf_debug("Starting...\n");
+        printf_debug("Komenzando...\n");
 
 	struct payload_info payload_info;
 	payload_info.buffer = (uint8_t *)kpayload;
@@ -278,9 +278,9 @@ int _main(struct thread *td)
 
         char fw_version[6] = {0};
         get_firmware_string(fw_version);
-	printf_notification("Welcome To PS4HEN v"VERSION"\nPS4 Firmware %s", fw_version);
+	printf_notification("Bienvenido a PS4HEN v"VERSION"\nFirmware de PS4 %s", fw_version);
 
-	printf_debug("Done.\n");
+	printf_debug("Hack Kompletado \n      by JMC");
 
 	return result;
 }
