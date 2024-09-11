@@ -23,16 +23,16 @@
 On your computer, clone the repository:
 
 ```sh
-git clone --recursive https://github.com/EchoStretch/ps4-hen-vtx.git
+git clone --recursive https://github.com/Keopos/hen.git
 ```
 
 Compile the payloads:
 
 ```sh
-./build.sh 900
+./build.sh 1100
 ```
 
-For other firmwares, e.g. FW 11.00, `./build.sh 1100`.
+For other firmwares, e.g. FW 9.00, `./build.sh 900`.
 
 ## Contributors
 Massive credits to the following:
